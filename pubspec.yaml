@@ -71,9 +71,16 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
 
+flutter_native_splash:
+  color: "#ffffff"  
+  image: assets/images/logo.png
+  fullscreen: true
+  android_12:
+    color: "#ffffff"
+    image: assets/images/logo.png    
+    icon_background_color: "#111111"
+    
 # The following section is specific to Flutter packages.
 flutter:
 
@@ -84,7 +91,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/fonts/
     - assets/images/
     - assets/svgs/
 
