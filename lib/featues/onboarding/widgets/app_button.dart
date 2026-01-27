@@ -1,12 +1,14 @@
 import 'package:advanced_flutter_course/core/theming/test_styles.dart';
 import 'package:flutter/material.dart';
 
-class GetStartedButton extends StatelessWidget {
-  const GetStartedButton({super.key});
+class AppButton extends StatelessWidget {
+  final String text;
+  final VoidCallback onPressed;
+  const AppButton({super.key, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(onPressed: (){},
+    return TextButton(onPressed: onPressed,
     
     style: TextButton.styleFrom(
       minimumSize: Size(double.infinity, 12),
