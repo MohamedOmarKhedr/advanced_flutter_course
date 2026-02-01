@@ -19,8 +19,7 @@ class LoginForm extends StatefulWidget {
 
 class _LoginFormState extends State<LoginForm> {
   late final LoginCubit _loginCubit;
-  late final TextEditingController _emailController;
-  late final TextEditingController _passwordController;
+
   bool isObscureText = true;
   bool isRememberMe = false;
 
@@ -86,7 +85,7 @@ class _LoginFormState extends State<LoginForm> {
               ),
               validator: (value) {
                 if (value == null || value.isEmpty || !AppRegex.isPasswordValid(value)) {
-                  return 'please enter your valid email';
+                  return 'please enter your valid password';
                 } else {
                   return null;
                 }

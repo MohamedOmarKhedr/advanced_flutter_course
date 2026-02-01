@@ -2,14 +2,13 @@ import 'package:advanced_flutter_course/core/helper/extensions/navigation_extens
 import 'package:advanced_flutter_course/core/helper/spaces_helper.dart';
 import 'package:advanced_flutter_course/core/routing/routes.dart';
 import 'package:advanced_flutter_course/core/theming/test_styles.dart';
-import 'package:advanced_flutter_course/featues/login/ui/widgets/i_not_have_account_text.dart';
-import 'package:advanced_flutter_course/featues/login/ui/widgets/login_form.dart';
-import 'package:advanced_flutter_course/featues/login/ui/widgets/terms_and_conditions_text.dart';
+import 'package:advanced_flutter_course/featues/sign_up/ui/widgets/i_have_account.dart';
+import 'package:advanced_flutter_course/featues/sign_up/ui/widgets/sign_up_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,16 +26,13 @@ class LoginScreen extends StatelessWidget {
               verticalSpace(36),
               Column(
                 children: [
-                  LoginForm(),
-                  verticalSpace(16),
-                  TermsAndConditionsText(),
+                  SignUpForm(),
                   verticalSpace(30),
                   GestureDetector(
-                    onTap: ()  {
-                      context.pushNamed(Routes.signUpScreen);
-                      },
-                    child: INotHaveAccountText())
-                  
+                    onTap: (){
+                      context.pushNamed(Routes.loginScreen);
+                    },
+                    child: IHaveAccount())
                 ],
               )
             ],
