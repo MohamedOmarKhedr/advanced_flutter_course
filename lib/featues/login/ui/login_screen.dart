@@ -1,8 +1,7 @@
 import 'package:advanced_flutter_course/core/helper/spaces_helper.dart';
 import 'package:advanced_flutter_course/core/theming/test_styles.dart';
-import 'package:advanced_flutter_course/core/widgets/app_button.dart';
-import 'package:advanced_flutter_course/core/widgets/app_text_form_field.dart';
 import 'package:advanced_flutter_course/featues/login/ui/widgets/i_not_have_account_text.dart';
+import 'package:advanced_flutter_course/featues/login/ui/widgets/login_form.dart';
 import 'package:advanced_flutter_course/featues/login/ui/widgets/terms_and_conditions_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,39 +32,15 @@ class _LoginScreenState extends State<LoginScreen> {
               style: TextStyles.font14GrayRegular,
               ),
               verticalSpace(36),
-              Form(
-                key: formkey,
-                child: Column(
-                  children: [
-                    AppTextFormField(hintText: 'email'),
-                    verticalSpace(16),
-                    AppTextFormField(hintText: 'password',obscureText: isObscureText,
-                    suffixIcon: IconButton(onPressed: (){
-                      setState(() {
-                        isObscureText = !isObscureText;
-                      });
-                    }, icon: Icon(isObscureText? Icons.visibility_off : Icons.visibility)),
-                    ),
-                    verticalSpace(8),
-                    Row(children: [
-                      Checkbox(value: isRememberMe, onChanged: (value){
-                        setState(() {
-                          isRememberMe = value!;
-                        });
-                      }),
-                      Text('Remember Me',style: TextStyles.font14GrayRegular),
-                      Spacer(),
-                      Text('Forgot Password?',style: TextStyles.font14DarkBlueMedium),
-                    ],),
-                    verticalSpace(30),
-                    AppButton(text: 'Login', onPressed: (){}),
-                    verticalSpace(16),
-                    TermsAndConditionsText(),
-                    verticalSpace(30),
-                    INotHaveAccountText()
-                    
-                  ],
-                ),
+              Column(
+                children: [
+                  LoginForm(),
+                  verticalSpace(16),
+                  TermsAndConditionsText(),
+                  verticalSpace(30),
+                  INotHaveAccountText()
+                  
+                ],
               )
             ],
           ),
