@@ -9,11 +9,11 @@ class TermsAndConditionsText extends StatelessWidget {
     return RichText(text: TextSpan(
       children: [
         TextSpan(
-          text: 'By logging, you agree to ou ',
+          text: 'By logging, you agree to our ',
           style: TextStyles.font14GrayRegular,
         ),
         TextSpan(
-          text: 'Terms & Conditions and PrivacyPolicy. ',
+          text: 'Terms & Conditions and PrivacyPolicy ',
           style: TextStyles.font14DarkBlueMedium
         ),
         TextSpan(

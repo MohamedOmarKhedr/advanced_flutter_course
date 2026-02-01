@@ -32,6 +32,14 @@ class AppTextFormField extends StatelessWidget {
           borderRadius: BorderRadius.circular(16.sp),
           borderSide: BorderSide(color: ColorsManager.lightGray, width: 1.3),
         ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16.sp),
+          borderSide: BorderSide(color: Colors.red, width: 1.3),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16.sp),
+          borderSide: BorderSide(color: Colors.red, width: 1.3),
+        ),
         hintText: hintText,
         hintStyle: TextStyles.font14GrayRegular,
         fillColor: backgroundColor??ColorsManager.morelightGray,
