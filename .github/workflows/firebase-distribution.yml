@@ -3,7 +3,7 @@ name: Flutter Firebase Distribution
 on:
   push:
     branches:
-      - development   # يتنفذ عند الدفع على development
+      - master   # يتنفذ عند الدفع على master
   workflow_dispatch: # تشغيل يدوي
 
 jobs:
