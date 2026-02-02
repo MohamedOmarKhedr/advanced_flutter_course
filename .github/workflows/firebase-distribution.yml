@@ -38,7 +38,7 @@ jobs:
         run: |
           firebase appdistribution:distribute build/app/outputs/flutter-apk/app-production-release.apk \
             --app "${{ secrets.FIREBASE_APP_ID }}" \
-            --testers test.test20122000@gmail.com" \
+            --testers "test.test20122000@gmail.com" \
             --release-notes "Automated build from GitHub Actions" \
             --token "${{ secrets.FIREBASE_TOKEN }}"
         env:
